@@ -1,0 +1,28 @@
+//CHROME DRIVER--> INCLUDES NEW TAB HANDLING FOR AUTOMATION TESTING
+
+package autoTest1;
+import java.util.ArrayList;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WindowType;
+public class Test1 {
+
+	public static void main(String[] args) {
+		System.setProperty("chrome.driver.webdriver","C:\\Users\\student\\Downloads\\chromedriver-win64 (1).zip\\chromedriver-win64\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.navigate().to("https://www.flipkart.com");
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[1]/header/div[1]/div[2]/form/div/div/input")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/div/div/div/div[1]/div/div[1]/div/div[1]/div[1]/header/div[1]/div[2]/form/div/div/input")).sendKeys("watch",Keys.ENTER);
+		
+		driver.findElement(By.xpath("/html/body/div/div/div[3]/div[1]/div[2]/div[3]/div/div[1]/div/a/div[1]/div/div/div/img")).click();
+		ArrayList<String> newTab = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(newTab.get(1));
+		
+		driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[1]/div[1]/div[2]/div/ul/li[1]/button")).click();
+	}
+
+}
