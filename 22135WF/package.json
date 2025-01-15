@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0"
+  },
+  "name": "dummy1",
+  "version": "1.0.0",
+  "description": "new dummy module",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hepo"
+  ],
+  "author": "sani",
+  "license": "ISC"
+}

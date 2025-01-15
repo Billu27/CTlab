@@ -1,0 +1,8 @@
+search modules - npm search colors
+open docs in browser - npm docs colors
+install a module - npm install colors
+to install module in global folder - npm install moduleName --global
+
+CREATE YOUR OWN PACKGE 
+1. npm init
+2. give name etc
