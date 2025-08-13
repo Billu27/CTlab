@@ -1,0 +1,8 @@
+package polymorphism;
+
+public class B extends A {
+  @Override
+  public void greeting(){
+    System.out.println("\nWelcome");
+  }
+}
